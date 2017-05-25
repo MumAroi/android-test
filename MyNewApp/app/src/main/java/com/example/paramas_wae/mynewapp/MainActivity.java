@@ -3,6 +3,7 @@ package com.example.paramas_wae.mynewapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,8 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttononClick(View v){
         TextView textView = (TextView) findViewById(R.id.message);
-
-        textView.setText("Button Clicked");
+        EditText editText = (EditText) findViewById(R.id.usermessage);
+        String message =  editText.getText().toString();
+        textView.setText(message);
 
     }
 }
