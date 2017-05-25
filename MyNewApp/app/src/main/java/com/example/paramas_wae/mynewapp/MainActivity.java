@@ -15,15 +15,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttononClick(View v){
-        EditText editTextHeight = (EditText) findViewById(R.id.userHeight);
-        EditText editTextWeight = (EditText) findViewById(R.id.userWeight);
-        TextView textViewResult = (TextView) findViewById(R.id.userBMI);
-
-        double height = Double.parseDouble(editTextHeight.getText().toString());
-        double weight = Double.parseDouble(editTextWeight.getText().toString());
-
-        double BMI = weight / (height * height);
-
-        textViewResult.setText(Double.toString(BMI));
+//        EditText editTextHeight = (EditText) findViewById(R.id.userHeight);
+//        EditText editTextWeight = (EditText) findViewById(R.id.userWeight);
+//        TextView textViewResult = (TextView) findViewById(R.id.userBMI);
+//
+//        double height = Double.parseDouble(editTextHeight.getText().toString());
+//        double weight = Double.parseDouble(editTextWeight.getText().toString());
+//
+//        double BMI = weight / (height * height);
+//
+//        textViewResult.setText(Double.toString(BMI));
     }
 }
