@@ -10,10 +10,8 @@
     android:paddingRight="5dp"
     android:paddingLeft="5dp"
 
-    android:columnCount="2"
-    android:rowCount="3"
-
     tools:context="com.example.paramas_wae.mynewapp.MainActivity">
+
 
     <Button
         android:id="@+id/button"
