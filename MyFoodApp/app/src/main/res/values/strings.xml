@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyFoodApp</string>
+
+    <string-array name="option">
+        <item>Eat</item>
+        <item>Drink</item>
+        <item>Other</item>
+    </string-array>
 </resources>
