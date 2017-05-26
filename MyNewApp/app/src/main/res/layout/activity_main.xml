@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+
     android:paddingTop="10dp"
     android:paddingRight="5dp"
     android:paddingLeft="5dp"
 
+    android:columnCount="2"
+    android:rowCount="3"
+
     tools:context="com.example.paramas_wae.mynewapp.MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button 1"
-        android:id="@+id/buone"
+    <TextView
+        android:text="Email"
+        android:layout_column="0"
+        android:layout_row="0"
         />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button 2"
-        android:layout_below="@+id/buone"
-        android:id="@+id/butwo"
-        android:layout_marginTop="30dp"
+    <EditText
+        android:hint="Enter Email"
+        android:layout_column="1"
+        android:layout_row="0"
+        />
+    <EditText
+        android:hint="Enter message"
+        android:layout_column="0"
+        android:layout_row="1"
+        android:gravity="top"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
         />
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button 3"
-        android:layout_alignBaseline="@+id/butwo"
-        android:layout_alignBottom="@+id/butwo"
-        android:layout_toRightOf="@+id/butwo"
-        android:layout_toEndOf="@+id/butwo"
+        android:text="Send"
+        android:layout_column="1"
+        android:layout_row="2"
+        android:layout_gravity="center_horizontal"
         />
-</RelativeLayout>
+</GridLayout>
