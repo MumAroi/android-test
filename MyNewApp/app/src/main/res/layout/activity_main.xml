@@ -12,24 +12,20 @@
 
     tools:context="com.example.paramas_wae.mynewapp.MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="30dp"/>
 
     <Button
-        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="209dp"
         android:text="Click Here"
-        android:onClick="buttonClicked"
-        />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:id="@+id/myButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:text="First Activity" />
+        android:layout_centerVertical="true"/>
 </RelativeLayout>
