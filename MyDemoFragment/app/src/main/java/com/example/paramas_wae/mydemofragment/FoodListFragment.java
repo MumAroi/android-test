@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -51,7 +50,7 @@ public class FoodListFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         String name [] = new String[Menu.menus.length];
-        for (int i = 0 ; i <= name.length; i++){
+        for (int i = 0 ; i < name.length; i++){
             name[i] = Menu.menus[i].getName();
         }
         ArrayAdapter adapter = new ArrayAdapter(inflater.getContext(),android.R.layout.simple_expandable_list_item_1,name);

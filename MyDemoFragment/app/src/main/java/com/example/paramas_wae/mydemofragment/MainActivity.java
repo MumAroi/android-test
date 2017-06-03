@@ -1,15 +1,18 @@
 package com.example.paramas_wae.mydemofragment;
 
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import static com.example.paramas_wae.mydemofragment.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity implements FoodListFragment.FoodListListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(activity_main);
 
 //        MenuDetailFragment frag = (MenuDetailFragment) getSupportFragmentManager().findFragmentById(R.id.detail_frag);
 //        frag.setMenuID(1);
