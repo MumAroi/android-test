@@ -14,7 +14,7 @@ import android.widget.Button;
  * A simple {@link Fragment} subclass.
  */
 public class MyFragment extends Fragment {
-
+    private Button btnClose;
 
     public static MyFragment newInstance() {
         return new MyFragment();
@@ -34,6 +34,17 @@ public class MyFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        btnClose = (Button) view.findViewById(R.id.)
+        btnClose = (Button) view.findViewById(R.id.bnt_colse);
+        btnClose.setOnClickListener(onCloseClickListener);
     }
+
+    private View.OnClickListener onCloseClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            getFragmentManager()
+                    .beginTransaction()
+                    .remove(MyFragment.this)
+                    .commit();
+        }
+    };
 }
