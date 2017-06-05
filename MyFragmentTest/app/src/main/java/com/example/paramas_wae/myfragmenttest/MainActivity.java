@@ -18,20 +18,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (savedInstanceState == null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.layout_fragment_container, MyFragment.newInstance(), TAG_FRAGMENT)
+                    .commit();
+        }
+
         bntAddFragment = (Button) findViewById(R.id.btn_add_fragment);
         bntRemoeFragment = (Button) findViewById(R.id.btn_remove_fragment);
 
         bntAddFragment.setOnClickListener(onAddFragmentClickListener);
         bntRemoeFragment.setOnClickListener(onRemoveFragmentClickListener);
+
     }
 
     private View.OnClickListener onAddFragmentClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(R.id.layout_fragment_container, MyFragment.newInstance(), TAG_FRAGMENT)
-                    .commit();
+            Fragment fragment = getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
+            if (fragment == null) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .add(R.id.layout_fragment_container, MyFragment.newInstance(), TAG_FRAGMENT)
+                        .commit();
+            }
         }
     };
 
