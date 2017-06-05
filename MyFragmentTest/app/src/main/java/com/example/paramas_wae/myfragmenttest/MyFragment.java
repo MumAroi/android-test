@@ -2,10 +2,12 @@ package com.example.paramas_wae.myfragmenttest;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -15,12 +17,7 @@ public class MyFragment extends Fragment {
 
 
     public static MyFragment newInstance() {
-
-        Bundle args = new Bundle();
-
-        MyFragment fragment = new MyFragment();
-        fragment.setArguments(args);
-        return fragment;
+        return new MyFragment();
     }
     public MyFragment() {
         // Required empty public constructor
@@ -34,4 +31,9 @@ public class MyFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_my, container, false);
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+//        btnClose = (Button) view.findViewById(R.id.)
+    }
 }
