@@ -25,11 +25,11 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new OneFragment();
+            return OneFragment.newInstance();
         } else if (position == 1) {
-            return new TwoFragment();
+            return TwoFragment.newInstance();
         } else if (position == 2) {
-            return new ThreeFragment();
+            return ThreeFragment.newInstance();
         }
         return null;
     }

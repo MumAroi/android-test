@@ -13,6 +13,11 @@ import android.view.ViewGroup;
  */
 public class TwoFragment extends Fragment {
 
+    public static TwoFragment newInstance() {
+        TwoFragment fragment = new TwoFragment();
+        return fragment;
+    }
+
     public TwoFragment() {
         // Required empty public constructor
     }

@@ -13,6 +13,10 @@ import android.view.ViewGroup;
  */
 public class ThreeFragment extends Fragment {
 
+    public static ThreeFragment newInstance() {
+        ThreeFragment fragment = new ThreeFragment();
+        return fragment;
+    }
 
     public ThreeFragment() {
         // Required empty public constructor
