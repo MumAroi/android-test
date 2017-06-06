@@ -50,14 +50,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Fragment fragment = getActiveFragment(pager, 0);
                 OneFragment oneFragment = (OneFragment) fragment;
-                String message = oneFragment.getMyText();
-                Log.i("Check : ", message);
+                if(oneFragment != null){
+                    String message = oneFragment.getMyText();
+                    Log.i("Check : ", message);
+                }
+
             }
         });
     }
 
     public Fragment getActiveFragment(ViewPager container, int position) {
-        String name = "android:switcher" + container.getId() + ":" + position;
+        String name = "android:switcher:" + container.getId() + ":" + position;
         return getSupportFragmentManager().findFragmentByTag(name);
 
     }
