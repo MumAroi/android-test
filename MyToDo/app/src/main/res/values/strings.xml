@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">MyToDo</string>
-    <string name="nav_view_header_title">Hello Todo App</string>
+    <string name="nav_view_header_title">Hello world App</string>
 </resources>

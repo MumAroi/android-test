@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="TO-DO List"
+        android:title="World List"
         android:id="@+id/list_nav_menu_item"
-        android:icon="@drawable/ic_list_24dp"
+        android:icon="@drawable/ic_whatshot_24dp"
         />
     <item
-        android:title="Statistics"
+        android:title="MaewMeow"
         android:id="@+id/statistics_nav_item"
-        android:icon="@drawable/ic_poll_24dp"
+        android:icon="@drawable/ic_add_24dp"
         />
 </menu>
