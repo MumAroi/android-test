@@ -1,4 +1,4 @@
-package com.example.paramas_wae.mytodo;
+package com.example.paramas_wae.mytodo.tacks;
 
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class ToDoManiActivity extends AppCompatActivity {
+import com.example.paramas_wae.mytodo.R;
+
+public class TasksActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     @Override
@@ -29,13 +31,20 @@ public class ToDoManiActivity extends AppCompatActivity {
 //        if(navigationView != null){
 //            setupDrawerContent(navigationView);
 //        }
+        TasksFragment tasksFragment = (TasksFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
+        if(tasksFragment == null ){
+            tasksFragment = tasksFragment.newInstance();
+        }
+
     }
 
+    // เวลา กด icon menu จะมี callback มาเรียก function นี้
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case android.R.id.home:
                 // Open the navigation drawer when the home icon is selected from the toolbar.
+                // สั่งให่เปิด tap menu navigation
                 drawerLayout.openDrawer(GravityCompat.START);
                 return true;
         }
