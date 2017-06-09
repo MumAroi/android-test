@@ -1,5 +1,6 @@
 package com.example.paramas_wae.mytodo.tacks;
 
+import android.app.Activity;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.paramas_wae.mytodo.R;
+import com.example.paramas_wae.mytodo.util.ActivityUtils;
 
 public class TasksActivity extends AppCompatActivity {
 
@@ -34,6 +36,7 @@ public class TasksActivity extends AppCompatActivity {
         TasksFragment tasksFragment = (TasksFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
         if(tasksFragment == null ){
             tasksFragment = tasksFragment.newInstance();
+            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),tasksFragment, R.id.contentFrame);
         }
 
     }
