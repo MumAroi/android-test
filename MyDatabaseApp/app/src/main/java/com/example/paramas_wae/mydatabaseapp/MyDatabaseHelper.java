@@ -2,6 +2,7 @@ package com.example.paramas_wae.mydatabaseapp;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -39,6 +40,22 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         String query = "DELETE FROM " + TABLE_TASKS + " WHERE " + COLUMN_ID + " = " + _id + ";";
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL(query);
+    }
+
+    public String databaseToString(){
+        String dataString="";
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "SELECT * FROM "+TABLE_TASKS+" WHERE 1";
+        Cursor c = db.rawQuery(query,null);
+        while(!c.isAfterLast()){
+            if(c.getString(c.getColumnIndex(COLUMN_TASKNAME))!= null){
+                dataString += c.getString(c.getColumnIndex(COLUMN_TASKNAME));
+                dataString += "\n";
+            }
+            c.moveToNext();
+        }
+        db.close();
+        return dataString;
     }
 
     @Override
