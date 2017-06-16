@@ -38,7 +38,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     public void removeTasks(String taskName) {
         String query = "DELETE FROM " + TABLE_TASKS + " WHERE " + COLUMN_TASKNAME + " = \"" + taskName + "\";";
-        SQLiteDatabase db = getWritableDatabase();
+        SQLiteDatabase db = getWritableDatabase(); // getWritableDatabase เริ่มดารเขียน database
         db.execSQL(query);
     }
 
@@ -47,13 +47,13 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         String query = "SELECT * FROM "+TABLE_TASKS;
         Cursor c = db.rawQuery(query,null);
-        c.moveToFirst(); //เลื่อน cursor ไปหน้าสุด
+        c.moveToFirst(); //เลื่อน cursor ไป row หน้าสุด
         while(!c.isAfterLast()){ // isAfterLast ใช้ตรวจสอบ cursor ว่า อยู่ที่ตำแหน่งสุกท้ายหรือไม่
             if(c.getString(c.getColumnIndex(COLUMN_TASKNAME))!= null){ // getColumnIndex ใช้ในการดึงข้อมูลของ column ใน row นั้นๆ
                 dataString += c.getString(c.getColumnIndex(COLUMN_TASKNAME));
                 dataString += "\n";
             }
-            c.moveToNext();
+            c.moveToNext(); // moveToNext เลือน cursor ไป row ถัดไป
         }
         db.close();
         return dataString;
