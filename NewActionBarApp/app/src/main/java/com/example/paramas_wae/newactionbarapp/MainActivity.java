@@ -1,5 +1,6 @@
 package com.example.paramas_wae.newactionbarapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -46,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
+        if(id == R.id.order){
+            Intent intent = new Intent(MainActivity.this,Order.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 }
