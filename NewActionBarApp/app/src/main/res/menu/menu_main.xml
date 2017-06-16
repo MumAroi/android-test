@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.paramas_wae.newactionbarapp.MainActivity">
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <!--orderInCategory การเรียงลําดับของ action menu-->
+    <item
+        android:id="@+id/order"
+        android:title="Order"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="1"/>
+</menu>
