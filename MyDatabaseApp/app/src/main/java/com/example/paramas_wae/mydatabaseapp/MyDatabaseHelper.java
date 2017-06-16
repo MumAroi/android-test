@@ -24,7 +24,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "CREATE TABLE " + TABLE_TASKS + " ( " + COLUMN_ID + " INTEGER PRIMARY AUTOINCREMENT, " + COLUMN_TASKNAME + " TEXT );";
+        String query = "CREATE TABLE " + TABLE_TASKS + " ( " + COLUMN_ID + " INTEGER PRIMARY KEY, " + COLUMN_TASKNAME + " TEXT );";
         db.execSQL(query);
     }
 
@@ -36,8 +36,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void removeTasks(int _id) {
-        String query = "DELETE FROM " + TABLE_TASKS + " WHERE " + COLUMN_ID + " = " + _id + ";";
+    public void removeTasks(String taskName) {
+        String query = "DELETE FROM " + TABLE_TASKS + " WHERE " + COLUMN_TASKNAME + " = \"" + taskName + "\";";
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL(query);
     }
@@ -45,10 +45,11 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     public String databaseToString(){
         String dataString="";
         SQLiteDatabase db = getWritableDatabase();
-        String query = "SELECT * FROM "+TABLE_TASKS+" WHERE 1";
+        String query = "SELECT * FROM "+TABLE_TASKS;
         Cursor c = db.rawQuery(query,null);
-        while(!c.isAfterLast()){
-            if(c.getString(c.getColumnIndex(COLUMN_TASKNAME))!= null){
+        c.moveToFirst(); //เลื่อน cursor ไปหน้าสุด
+        while(!c.isAfterLast()){ // isAfterLast ใช้ตรวจสอบ cursor ว่า อยู่ที่ตำแหน่งสุกท้ายหรือไม่
+            if(c.getString(c.getColumnIndex(COLUMN_TASKNAME))!= null){ // getColumnIndex ใช้ในการดึงข้อมูลของ column ใน row นั้นๆ
                 dataString += c.getString(c.getColumnIndex(COLUMN_TASKNAME));
                 dataString += "\n";
             }

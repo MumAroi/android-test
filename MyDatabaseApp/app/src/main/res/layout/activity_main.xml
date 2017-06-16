@@ -17,13 +17,16 @@
         android:id="@+id/bntAddTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="add tesk"/>
+        android:text="add tesk"
+        android:onClick="addButtOnClicked"/>
     <Button
         android:id="@+id/bntRemoveTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="remove tesk"/>
+        android:text="remove tesk"
+        android:onClick="removeButtonOnClick"/>
     <TextView
+        android:id="@+id/textViewAddTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
