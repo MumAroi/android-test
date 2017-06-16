@@ -46,7 +46,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         String dataString="";
         SQLiteDatabase db = getWritableDatabase();
         String query = "SELECT * FROM "+TABLE_TASKS;
-        Cursor c = db.rawQuery(query,null);
+        Cursor c = db.rawQuery(query,null); // Cursor ใช้ในการระบุุข้อมูลที่เลือก 
         c.moveToFirst(); //เลื่อน cursor ไป row หน้าสุด
         while(!c.isAfterLast()){ // isAfterLast ใช้ตรวจสอบ cursor ว่า อยู่ที่ตำแหน่งสุกท้ายหรือไม่
             if(c.getString(c.getColumnIndex(COLUMN_TASKNAME))!= null){ // getColumnIndex ใช้ในการดึงข้อมูลของ column ใน row นั้นๆ
