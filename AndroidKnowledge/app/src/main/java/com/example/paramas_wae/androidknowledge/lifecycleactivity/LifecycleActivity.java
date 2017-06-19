@@ -3,6 +3,7 @@ package com.example.paramas_wae.androidknowledge.lifecycleactivity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.paramas_wae.androidknowledge.R;
+import com.example.paramas_wae.androidknowledge.util.ActivityUtils;
 
 public class LifecycleActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -42,6 +44,13 @@ public class LifecycleActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        LifecycleFragment lifecycleFragment = (LifecycleFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
+        if (lifecycleFragment != null ){
+            // create fragment
+            lifecycleFragment = LifecycleFragment.newInstance();
+            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),lifecycleFragment,R.id.contentFrame);
+        }
     }
 
     @Override
