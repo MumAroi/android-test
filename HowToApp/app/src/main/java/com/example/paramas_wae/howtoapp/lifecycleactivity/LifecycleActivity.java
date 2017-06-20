@@ -1,4 +1,4 @@
-package com.example.paramas_wae.howtoapp;
+package com.example.paramas_wae.howtoapp.lifecycleactivity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.paramas_wae.howtoapp.R;
 
 public class LifecycleActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

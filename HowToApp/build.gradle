@@ -21,3 +21,10 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext{
+    supportLibraryVersion = '25.3.1'
+    guavaVersion = '19.0'
+    supportConstraint = '1.0.2'
+}
+
