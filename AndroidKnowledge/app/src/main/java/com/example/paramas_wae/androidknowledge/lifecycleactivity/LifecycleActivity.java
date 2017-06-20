@@ -46,7 +46,7 @@ public class LifecycleActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         LifecycleFragment lifecycleFragment = (LifecycleFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
-        if (lifecycleFragment != null ){
+        if (lifecycleFragment == null ){
             // create fragment
             lifecycleFragment = LifecycleFragment.newInstance();
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),lifecycleFragment,R.id.contentFrame);
