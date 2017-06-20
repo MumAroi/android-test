@@ -29,5 +29,6 @@ dependencies {
     compile "com.android.support.constraint:constraint-layout:$rootProject.supportConstraint"
     compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     compile "com.google.guava:guava:$rootProject.guavaVersion"
+    compile 'com.android.support:support-v4:25.3.1'
     testCompile 'junit:junit:4.12'
 }
