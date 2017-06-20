@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:clickable="true"
     tools:context="com.example.paramas_wae.androidknowledge.lifecycleactivity.LifecycleFragment">
 
     <LinearLayout
@@ -33,13 +32,19 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/noTasksMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="1123"
-            android:layout_marginBottom="8dp" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/noTasksMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:text="1123" />
+        </ScrollView>
+
     </LinearLayout>
 
 </RelativeLayout>
