@@ -1,18 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context="com.example.paramas_wae.memapp.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!--inputType : ชนิดของ input ex. num, text, password-->
+    <!--ems : ความยาวของ editText-->
+    <EditText
+        android:id="@+id/editTop"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:ems="10"
+        android:hint="Enter Top name text"
+        android:inputType="text" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/editBot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Botton name text"
+        android:inputType="text" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="add_image"
+        android:text="add image" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="try_meme" />
+
+    <RelativeLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <ImageView
+            android:id="@+id/memeImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <TextView
+            android:id="@+id/nameTopText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Meme Top name"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="36dp" />
+
+        <TextView
+            android:id="@+id/nameBotText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="Meme Botton name"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="36dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="save_image"
+        android:text="save" />
+</LinearLayout>
