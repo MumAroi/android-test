@@ -34,6 +34,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="try_meme"
         android:text="try_meme" />
 
     <RelativeLayout
@@ -70,9 +71,10 @@
     </RelativeLayout>
 
     <Button
+        style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="save_image"
-        android:text="save" />
+        android:text="save_image" />
 </LinearLayout>

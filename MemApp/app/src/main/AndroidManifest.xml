@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.paramas_wae.memapp">
-
+    <!--READ_EXTERNAL_STORAGE : ขอสิทธิ์เข้าถึง พื้นที่จัดเก๊บข้อมูลภายนอกของ โทรศัพท์ **ไม่ใช่ sd card นะเห้ย -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
