@@ -3,6 +3,8 @@
     package="com.example.paramas_wae.memapp">
     <!--READ_EXTERNAL_STORAGE : ขอสิทธิ์เข้าถึง พื้นที่จัดเก๊บข้อมูลภายนอกของ โทรศัพท์ **ไม่ใช่ sd card นะเห้ย -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--WRITE_EXTERNAL_STORAGE : ขอสิทธิ์ในการเขียน พื้นที่จัดเก๊บข้อมูลภายนอกของ โทรศัพท์ **ไม่ใช่ sd card นะเห้ย -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
