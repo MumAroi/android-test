@@ -48,14 +48,30 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonClicked(View view) {
         //-- step 1 --//
-        /*
-        EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();
-        myRef.setValue(message);
-        */
+            /*
+            EditText editText = (EditText) findViewById(R.id.editText);
+            String message = editText.getText().toString();
+            myRef.setValue(message);
+            */
         //-- end step 1 --//
-        EditText editText = (EditText) findViewById(R.id.editText);
-        myRef = database.getReference("User");
-        myRef.child("Name").push().setValue(editText.getText().toString());
+        //-- step 2 --//
+            /*EditText editText = (EditText) findViewById(R.id.editText);
+            myRef = database.getReference("User");
+            myRef.child("Name").push().setValue(editText.getText().toString());
+            */
+        //-- end step 2 --//
+        //-- step 3 --//
+            /*EditText editName = (EditText) findViewById(R.id.name);
+            EditText editContact = (EditText) findViewById(R.id.contact);
+
+            String child = editName.getText().toString();
+            //  .child(child) -> สร้าง key child ใหม่ขึ้นมา
+            //  .getReference("User") -> เป็นการ get key data ที่มีอยู่แล้ว
+            myRef = database.getReference("User").child(child);
+
+            myRef.child("Name").setValue(editName.getText().toString());
+            myRef.child("Contact").setValue(editContact.getText().toString());
+            */
+        //-- end step 3 --//
     }
 }
